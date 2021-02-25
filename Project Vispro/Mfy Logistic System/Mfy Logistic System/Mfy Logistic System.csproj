@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D39FCBDF-F639-46C6-B9B8-4EC291ECF005}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Mfy_Logistic_System</RootNamespace>
+    <AssemblyName>Mfy Logistic System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cmethod.cs" />
+    <Compile Include="CRInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DeleteVoyage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteVoyage.Designer.cs">
+      <DependentUpon>DeleteVoyage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteShips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteShips.Designer.cs">
+      <DependentUpon>DeleteShips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPassword.Designer.cs">
+      <DependentUpon>EditPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomepageAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomepageAdmin.Designer.cs">
+      <DependentUpon>HomepageAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListCustomer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListCustomer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewInvoice.Designer.cs">
+      <DependentUpon>NewInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log In Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log In Form.Designer.cs">
+      <DependentUpon>Log In Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageContainer.Designer.cs">
+      <DependentUpon>ManageContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageVoyages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageVoyages.Designer.cs">
+      <DependentUpon>ManageVoyages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageShips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageShips.Designer.cs">
+      <DependentUpon>ManageShips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUsers.Designer.cs">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageCustomer.Designer.cs">
+      <DependentUpon>ManageCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUser.Designer.cs">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreviewInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreviewInvoice.Designer.cs">
+      <DependentUpon>PreviewInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintListCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintListCustomer.Designer.cs">
+      <DependentUpon>PrintListCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectMfyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectMfyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchContainer.Designer.cs">
+      <DependentUpon>SearchContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchReceiver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchReceiver.Designer.cs">
+      <DependentUpon>SearchReceiver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchSender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchSender.Designer.cs">
+      <DependentUpon>SearchSender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchVoyage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchVoyage.Designer.cs">
+      <DependentUpon>SearchVoyage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchShips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchShips.Designer.cs">
+      <DependentUpon>SearchShips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchCustomer.Designer.cs">
+      <DependentUpon>SearchCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Searchusers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Searchusers.Designer.cs">
+      <DependentUpon>Searchusers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deletecustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deletecustomers.Designer.cs">
+      <DependentUpon>Deletecustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewContainer.Designer.cs">
+      <DependentUpon>ViewContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewInvoce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewInvoce.Designer.cs">
+      <DependentUpon>ViewInvoce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewVoyages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewVoyages.Designer.cs">
+      <DependentUpon>ViewVoyages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewShips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewShips.Designer.cs">
+      <DependentUpon>ViewShips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewcustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewcustomers.Designer.cs">
+      <DependentUpon>Viewcustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewusers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viewusers.Designer.cs">
+      <DependentUpon>Viewusers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CRInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteVoyage.resx">
+      <DependentUpon>DeleteVoyage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteShips.resx">
+      <DependentUpon>DeleteShips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPassword.resx">
+      <DependentUpon>EditPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage.resx">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomepageAdmin.resx">
+      <DependentUpon>HomepageAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListCustomer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ListCustomer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log In Form.resx">
+      <DependentUpon>Log In Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageContainer.resx">
+      <DependentUpon>ManageContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageVoyages.resx">
+      <DependentUpon>ManageVoyages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageShips.resx">
+      <DependentUpon>ManageShips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsers.resx">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageCustomer.resx">
+      <DependentUpon>ManageCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewInvoice.resx">
+      <DependentUpon>NewInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUser.resx">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreviewInvoice.resx">
+      <DependentUpon>PreviewInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintListCustomer.resx">
+      <DependentUpon>PrintListCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SearchContainer.resx">
+      <DependentUpon>SearchContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchReceiver.resx">
+      <DependentUpon>SearchReceiver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchSender.resx">
+      <DependentUpon>SearchSender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchVoyage.resx">
+      <DependentUpon>SearchVoyage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchShips.resx">
+      <DependentUpon>SearchShips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchCustomer.resx">
+      <DependentUpon>SearchCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Searchusers.resx">
+      <DependentUpon>Searchusers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deletecustomers.resx">
+      <DependentUpon>Deletecustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewContainer.resx">
+      <DependentUpon>ViewContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewInvoce.resx">
+      <DependentUpon>ViewInvoce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewVoyages.resx">
+      <DependentUpon>ViewVoyages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewShips.resx">
+      <DependentUpon>ViewShips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewcustomers.resx">
+      <DependentUpon>Viewcustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewusers.resx">
+      <DependentUpon>Viewusers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ProjectMfyDataSet.xsc">
+      <DependentUpon>ProjectMfyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectMfyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectMfyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectMfyDataSet.xss">
+      <DependentUpon>ProjectMfyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mfy Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close logo black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background login1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background login2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background login3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background NewUser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background ViewUser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background ViewUser1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background ViewUser2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
